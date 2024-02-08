@@ -62,6 +62,9 @@ public class SpellChecker {
 				if (levenshtein(word, minWord) > threshold) {
 					minWord = dictionary [i];
 				}
+				if (word.equals(dictionary [i])) {
+					minWord = dictionary [i];
+				}
 					
 			}
 		}
