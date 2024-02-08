@@ -59,7 +59,10 @@ public class SpellChecker {
 		String minWord = ""
 ;		for (int i = 0; i < dictionary.length; i++) {
 			if (levenshtein(word, dictionary [i]) <= levenshtein(word, minWord)) {
-				minWord = dictionary [i];
+				if (levenshtein(word, minWord) < threshold) {
+					minWord = dictionary [i];
+				}
+					
 			}
 		}
 
