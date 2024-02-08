@@ -36,7 +36,7 @@ public class SpellChecker {
 			return levenshtein(tail1,tail2);
 		} else {
 			int min = Math.min(levenshtein(tail1, word2), levenshtein(word1,tail2));
-			int distance = Math.min(min, levenshtein(tail1, tail2));
+			int distance = 1 + Math.min(min, levenshtein(tail1, tail2));
 			return distance;
 		}
 	
